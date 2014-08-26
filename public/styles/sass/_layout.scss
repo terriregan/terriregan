@@ -1,0 +1,67 @@
+.layout--container {
+	max-width: $bp-siteMaxWidth;
+	padding-left: 1em; 
+	padding-right: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: inherit; // IE 8
+	@include clearfix;
+
+	@include bp(25em) { 
+		padding-left: 1.5em; // 24/16, 24px;
+		padding-right: 1.5em; 
+	}
+
+	// &.full {
+	// 	padding-left: 0; 
+	// 	padding-right: 0;
+	// 	margin-left: 0;
+	// 	margin-right: 0;
+	// 	@include bp($bp-layout-small) {
+	// 		padding-left: 1.5em; // 24/16, 24px;
+	// 		padding-right: 1.5em;
+	// 		margin-left: auto;
+	// 		margin-right: auto;
+	// 	}
+	// }
+}
+
+.layout--arrow-home {
+	&:before {
+		content: '';
+		width: 30px;
+		height: 20px;
+		background-image: url("/images/icon-arrow-home.svg"); 
+		background-repeat: no-repeat;
+
+		.no-svg & {
+  			background-image: url("/images/icon-arrow-home.png"); 
+    	}
+	}
+}
+
+.layout--arrow {
+	&:before {
+		content: '';
+		width: 30px;
+		height: 20px;
+		background-image: url("/images/icon-arrow.svg"); 
+		background-repeat: no-repeat;
+
+		.no-svg & {
+  			background-image: url("/images/icon-arrow.png"); 
+    	}
+	}
+}
+
+.layout--left {
+	float: left;
+}
+
+.layout--right {
+	float: right;
+}
+
+.layout--last {
+	margin-right: 0;
+}

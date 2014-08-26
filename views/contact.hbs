@@ -1,0 +1,54 @@
+{{!< default}}
+
+<div class="site-page">
+	<section>
+		<div class="layout--container">
+			<h1 class="site-page--header">contact</h1>
+			{{#if form }}
+				{{#if form.errors.sendMailError }}
+					<div class="contact--error">{{ form.errors.sendMailError }}</div>
+				{{/if}}
+				<form id="contact" action="/contact" method="post" novalidate>
+					<div class="contact--wrapper">
+						<p class="site-page--intro">If you want to get in touch with me then please fill in your details below, or email me directly <a href="mailto:contact@theresaregan.com">contact@theresaregan.com</a></p>
+							<div>
+								{{#if form.errors.name }}
+									<div class="contact--error">{{ form.errors.name.msg }}</div>
+								{{/if}}
+								<label for="name" class="required">Name</label>
+								<input id="name" name="name" type="text" aria-required="true" aria-invalid="false" value="{{form.name}}"/>
+							</div>
+							<div>
+								{{#if form.errors.email }}
+									<div class="contact--error">{{ form.errors.email.msg }}</div>
+								{{/if}}
+								<label for="email" class="required">Email</label>
+								<input id="email" name="email" type="email" aria-required="true" aria-invalid="false" value="{{form.email}}"/>
+							</div>
+							<label for="subject">Subject</label>
+							<input id="subject" name="subject" type="text" value="{{form.subject}}"/>
+							<div class="contact--msg">
+								{{> contact-svg-lamp }}
+								<div class="contact--lamp-fallback"></div>
+								<label for="info">Message</label>
+								<textarea id="info" name="info" cols="30" rows="4">{{form.info}}</textarea>
+							</div>
+							<input class="button-main" value="Send Message" type="submit" /> 
+					</div>
+					<div class="contact--info">
+						<p>Email: <a href="mailto:contact@theresaregan.com">contact@theresaregan.com</a></p>
+						<p>Linked in:<a href="www.linkedin.com/in/terriregan">www.linkedin.com/in/terriregan</a></p>
+					</div>
+				</form><!-- /form -->
+			{{ else }}
+				<div class="contact--success-wrapper">
+					<div class="contact--success-avatar">{{> contact-avatar }}</div>
+					<div class="contact--success-content">
+						<h4>Thanks! Your message has been sent.</h4>
+						<p>I will get back to you as soon as I can.</p>
+					</div>
+				</div>
+			{{/if}} 
+		</div><!-- /layout -->
+	</section><!-- /section -->
+</div>

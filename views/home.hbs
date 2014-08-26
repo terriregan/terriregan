@@ -1,0 +1,41 @@
+{{!< default }}
+
+<div class="site-page--home">
+    <section>
+       <div id="hero" class="hero">  
+            <div id="hero--loading-wrapper">
+                <div id="hero--loader"></div>
+            </div><!-- /loader -->
+            <h1 class="hero--header">welcome.</h1>
+            <p class="hero--tagline">I'm a frontend developer who likes <br>to push pixels and sling code.</p>
+            <div id="hero--art-wrapper">
+                <div id="hero--pusher-wrapper">
+                    <div id="hero--pusher-svg">
+                    	{{> hero-svg-squares }} 
+                    </div>
+                    <h2 id="hero--pusher-header">design</h2>
+                </div>
+                <div id="hero--avatar-wrapper">
+                    <div id="hero--avatar-walker"></div>
+                    <div id="hero--avatar-svg-wrapper">
+                    	{{> hero-svg-avatar }}
+                    </div>
+                </div>
+                <div id="hero--slinger-wrapper">
+                    <h2 id="hero--slinger-header">code</h2>
+                    <div id="hero--code-wrapper">
+                        <span id="code1"> var module = (function($){</span> 
+                        <span id="code2"> var sum = 0; </span> 
+                        <span id="code3"> return {</span> 
+                        <span id="code4"> add: function(){</span> 
+                        <span id="code5"> return sum += 1; </span> 
+                        <span id="code6"> } </span> 
+                        <span id="code7"> } </span> 
+                        <span id="code8"> }(jQuery)); </span> 
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </section><!-- /section -->
+
+</div>

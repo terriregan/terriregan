@@ -1,0 +1,43 @@
+{{!< default}}
+
+<div class="site-page">
+	<div class="layout--container">
+		<h1 class="site-page--header">work</h1>
+		<!--<div class="work--filters">
+			<h1 class="site-page--header layout--left">work</h1>
+			<div class="work--filter-wrapper">
+				<div>Filter by:</div> 
+				<ul>
+					<li class="work--filter-item"><a href="#" class="work--filter-link"><i class="fa fa-mobile"></i></a></li>
+					<li class="work--filter-item"><a href="#" class="work--filter-link"><i class="fa fa-globe"></i></a></li>
+					<li class="work--filter-item"><a href="#" class="work--filter-link"><i class="fa fa-graduation-cap"></i></a></li>
+					<li class="work--filter-item"><a href="#" class="work--filter-link"><i class="fa fa-sitemap"></i></a></li>
+				</ul>
+			</div>
+		</div>-->
+		<section>
+			<div class="work">
+			 	{{#each projects}}
+			  	<div class="work--item">
+					<div class="work--inner">
+						<div class="work--info">
+							<a href="/work/{{this.id}}" title=""><img src="/images/{{this.thumbImage}}" alt="" />
+								<div class="work--readmore">
+									<p><i class="fa fa-angle-right fa-2x"></i></p>
+									<p>read more</p>
+								</div>
+							</a>
+						</div>
+						<div class="work--description">
+							{{!-- <a href="#" title="View code" alt="View code"><i class="fa fa-code"></i></a> --}}
+							<h4 class="work--title">{{this.shortname}}</h4>
+							<p class="work--type">{{this.type}}</p>
+						</div>
+					</div>
+				</div>
+			  	{{/each}}
+			</div>
+		</section><!-- /section --> 
+	</div><!-- /layout --> 
+
+</div>

@@ -1,0 +1,159 @@
+.site-header {
+	@include clearfix;
+	background: $blue-dark;
+  color: $white;
+  position: relative;
+  top: -75px;
+  @include transition(0.2s);
+  @include box-shadow(rgba(61,86,110, 0.3) 0px 4px 0px);
+
+  .no-js & {
+       top: 0;
+    }
+
+  .layout--container {
+    padding-left: 0; 
+    padding-right: 0;
+  }
+}
+
+.site-nav {
+  line-height: 3.75;  // 60px
+}
+
+.site-logo--link {
+  display: block;
+  float: left;
+  padding-left: 1em; // 20/20, 20px
+  padding-top: 12px;
+  @include bp($bp-layout-small) { padding-top: 14px; }
+}
+
+.site-logo {
+  @extend %font-primary;
+	float: left;
+  font-size: 1.3em;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: $white;
+  letter-spacing: 1px; 
+  vertical-align: middle;
+  span { font-weight: 500; }
+}
+
+.site-logo--svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.3em;
+}
+ 
+.site-logo--fallback {
+  display: none;
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5em;
+
+  .no-svg & {
+    display: inline-block;
+    background-image: url("/images/logo.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.site-logo--name {
+  display: none;
+  padding-top: 6px;
+  vertical-align: top;
+
+  @include bp(25em) {
+    display: inline-block;
+  }
+}
+
+.site-nav--button {
+  @extend %font-alternate; 
+  color: inherit;
+  float: right;
+  padding-right: 1.25em;   // 20/16, 20px
+  padding-top: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  i {  margin-left: 0.2em; }
+  &:hover i { margin-top: 0.2em; }
+  
+  @include bp($bp-layout-small) {
+    display: none;
+  }
+}
+
+.site-nav--list {
+	clear: both;
+  height: 0;
+  overflow: hidden;
+  background: $blue-dark;
+  padding-top: 1px; 
+  font-size: 1.1em;
+
+  @include transition(height 0.3s ease);  // compass plugin
+
+	// Opens the menu (#nav:target & opens menu when js turned off) 
+  #nav:target &, 
+	&.site-nav--display {
+		height: 11.6em;  // 19.2 for 5 items,  15.5 for 4 items
+    overflow: visible;
+
+    li:first-child {
+      border-top: 1px solid rgba(255, 255, 255, .3);
+    }
+	}
+
+	@include bp($bp-layout-small) {
+		background: none;
+		float: right;
+		clear: none;
+    height: auto;
+    border: none;
+    padding-right: 1.25em;   // 20/16, 20px
+  
+    &.site-nav--display {
+      height: auto;
+    }
+
+    li:first-child {
+      border-top: none;
+    }
+	}
+}
+
+.site-nav--item {
+  position: relative;
+  color: $white;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  @include transition(background-color .5s ease);
+  
+  @include bp($bp-layout-small) {
+    display: inline;
+    border: none;
+  }
+}
+
+.site-nav--link {
+  @extend %font-alternate;
+  padding-left: 1.25em;
+  display: inline-block;
+  width: 100%;
+  color: $white;
+  &:hover,
+  &.active { 
+      background-color: $blue-darker; 
+  }
+   
+  @include bp($bp-layout-small) {
+    width: auto;
+    @include transition(background-color .5s ease);
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

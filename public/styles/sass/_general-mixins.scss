@@ -1,0 +1,92 @@
+// @mixin sb-media($query) {
+//   @if $no-mq-support{
+//     @if $query < $serve-to-nomq-max-width {
+//       @content;
+//     }
+//   } @else {
+//     @media ( 'min-width:' + $query ) {
+//       @content;
+//     }
+//   }
+// }
+
+@mixin bp($point) {
+  $serve-to-nomq-max-width: 60em !default;
+
+  @if $no-mq-support {
+    @content;
+  } @else {
+    @media ( 'min-width:' + $point ) {
+      @content;
+    }
+  }
+}
+
+@mixin rem( $property, $a:0, $b:$a, $c:$a, $d:$b ) {
+  @if ( $property == "font-size" ) {
+    // $a is the font size
+    // %b is the keyword
+    @if ( $a != $b ) {
+      font-size: $b;
+    }
+    @else {
+      font-size: $a * $base-font-multiplier * 16px;
+    }
+    font-size: $a * 1rem;
+  } @else {
+    $apx: $a * $base-font-multiplier * 16px;
+    $bpx: $b * $base-font-multiplier * 16px;
+    $cpx: $c * $base-font-multiplier * 16px;
+    $dpx: $d * $base-font-multiplier * 16px;
+    $arem: $a * 1rem;
+    $brem: $b * 1rem;
+    $crem: $c * 1rem;
+    $drem: $d * 1rem;
+
+    @if ( $property == "padding" or $property == "margin" ){
+      #{$property}: $apx $bpx $cpx $dpx;
+      #{$property}: $arem $brem $crem $drem;
+    } @else {
+      #{$property}: $apx;
+      #{$property}: $arem;
+    }
+  }
+}
+
+@mixin inline($val) {
+  display: inline-block;
+  vertical-align: $val;
+  .lt-ie8 & {
+    display: inline;
+    zoom: 1;
+  }
+}
+
+@mixin clearfix() {
+  *zoom:1;
+
+  &:before,
+  &:after {
+      content:"";
+      display:table;
+  }
+  &:after {
+      clear:both;
+  }
+}
+
+// Provides cross-browser RGBa background.
+// Takes a RABa color as the argument, e.g. rgba(0, 0, 0, 0.5) for black background with 50% opacity.
+//
+// @param $color  A RGBa color
+@mixin rgba-background($color){
+    @include filter-gradient($color, $color);
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 or $legacy-support-for-ie8 {
+        background: transparent;
+ 
+        // set filter as none for IE9+, because IE9+ supprot RGBa
+        :root & {
+        filter: none\0/IE9;}
+    }
+    background: $color;
+}

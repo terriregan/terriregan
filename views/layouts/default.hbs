@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Portfolio | Terri Regan Front End Developer</title>
+        <meta name="description" content="Personal website of Terri Regan">
+        <meta name="author" content="Terri Regan">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- favicon.ico and apple-touch-icon.png icons -->
+        <link rel="icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    
+       <!-- fonts -->
+       <link href='http://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,500,700|Ubuntu:300,400' rel='stylesheet' type='text/css'>
+       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      {{!-- <link href="/css/font-awesome.min.css" rel="stylesheet"> --}}
+
+        <!--[if (lt IE 9) & (!IEMobile)]>
+            <link href="/styles/css/no-mq-base.css" rel="stylesheet">
+        <![endif]-->
+        <!--[if (gte IE 9) | (IEMobile)]><!-->
+            <link href="/styles/css/mq-base.css" rel="stylesheet">
+        <!--<![endif]-->
+     
+        <script src="/scripts/modernizr.js"></script>
+    </head>
+    <body class="hidden-body">
+        <header class="site-header">
+            <div class="layout--container">
+                <nav class="site-nav" id="nav" role="navigation">
+                    <a class="site-logo--link {{#if home }}active{{/if}}" href="/">
+                      <h1 class="site-logo">
+                        {{> logo-svg }}
+                        <div class="site-logo--fallback"></div>
+                        <div class="site-logo--name"><span>terri</span>regan</div>
+                      </h1>
+                      <a href="#nav" class="site-nav--button">Menu 
+                        <i class="fa fa-caret-down"></i>
+                      </a>
+                    {{> site-navigation }} 
+                </nav>
+            </div>
+        </header><!-- /header -->
+        <div role="main">
+
+            {{{ body }}}
+
+        </div><!-- /main -->
+        <footer class="site-footer">
+           {{> site-footer }}
+        </footer><!-- /footer -->  
+       
+       {{> default-scripts }}
+
+       {{!--  {{> google-analytics }} --}}
+    </body>
+</html>

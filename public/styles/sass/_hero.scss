@@ -1,0 +1,245 @@
+
+// TO DO: Add retina display mqs
+// 		@media screen and (max-width: 699px), only screen and (-webkit-min-device-pixel-ratio: 2) {
+//     Style changes here;
+// }
+  
+.hero {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.hero--header {
+	position: relative;
+	color: $blue-dark;
+	font-size: 3em;
+	line-height: 1;
+	margin-top: .3em;
+	font-family: 'Pacifico', cursive;
+	.svg & { @include opacity(0); }
+	.no-js & { @include opacity(1); }
+
+	@include bp(25em) { font-size: 3.6em; }
+	@include bp(34em) { font-size: 3.8em; }
+	@include bp(40em) { font-size: 4.0em; }
+}
+
+.hero--tagline {
+	position: relative;
+	@extend %font-primary;
+	color: $blue-dark;
+	font-weight: 100;
+	font-size: 1.2em; 
+	margin-top: .3em;
+	margin-bottom: 1.4em;
+	line-height: 1.1;
+	.svg & { @include opacity(0); }
+	.no-js & { @include opacity(1); }
+
+	@include bp(25em) { font-size: 1.3em; }
+	@include bp(34em) { font-size: 1.4em; }
+	@include bp(40em) { font-size: 1.5em; }
+}
+
+#hero--loading-wrapper {
+	position: absolute;
+	width: 200px;
+	top: 300px;
+	left: 50%;
+	margin-left: -100px;
+	text-align: center;
+	display: none;
+
+	.svg & { display: block; }
+
+	#hero--loader:before {
+		content: "";
+		position: absolute;
+		left: -40px;
+		height: 30px;
+		width: 30px;
+		border-radius: 30px;
+		-webkit-animation: loadera 2s ease-in-out infinite;
+				animation: loadera 2s ease-in-out infinite;
+	}
+
+	#hero--loader {
+		position: relative;
+		margin: 0 auto;
+		width: 30px;
+		height: 30px;
+		top: -90px;
+		border-radius: 30px;
+		-webkit-animation: laoderb 2s ease-in-out infinite;
+				animation: laoderb 2s ease-in-out infinite;
+	}
+
+	#hero--loader:after {
+		content: "";
+		position: absolute;
+		left: 40px;
+		height: 30px;
+		width: 30px;
+		border-radius: 30px;
+		-webkit-animation: loaderc 2s ease-in-out infinite;
+				animation: loaderc 2s ease-in-out infinite;
+	}
+}
+
+#hero--art-wrapper {
+	position: relative;
+	height: 240px;								// 74% - base 240/325
+	max-width: 40em;  
+	margin: 0 auto;
+	overflow: hidden;
+
+	@include bp(25em) { height: 280px; }		// 86% - base 280/325  // 288 vertical rythmn
+	@include bp(34em) { height: 305px; } 		// 92% - base 305/325  // 312
+	@include bp(40em) { height: 325px; }        // 336
+
+	h2 {  // design, code
+		@extend %font-alternate; 
+		color: #405b72;
+		width: 100px; 
+		font-weight: 700;
+		font-size: 1.3em; 
+		line-height: 1;
+		top: 74px;
+		right: 0;
+		
+		.svg & { @include opacity(0); }
+		.no-js & { @include opacity(1); }
+
+		@include bp(25em) { top: 86px; font-size: 1.4em; }
+		@include bp(34em) { top: 94px; font-size: 1.5em; } 
+		@include bp(40em) { font-size: 1.8em;  right: 6px; }
+	}
+}
+
+#hero--avatar-wrapper {
+	position: relative;
+	float:left;
+	width: 40%;
+	height: 240px;
+
+	@include bp(25em) { width: 40%; height: 280px; }
+	@include bp(34em) { width: 36%; height: 305px; }
+	@include bp(40em) { width: 32%; height: 325px; }
+}
+
+#hero--avatar-walker {
+	position: absolute;
+	left: 28px;
+	background: url(/images/hero-avatar-walk.png) 0 0 no-repeat;
+	background-position: -1440px;
+	background-size: 1300px 240px;		
+	height: 240px;
+	width: 118px;	// background-size (width)/numFrames == frameWidth ->  1300/11 = ~118
+
+	.svg & , .no-js & { @include opacity(0); left: -120px; }
+
+	@include bp(25em) { width: 138px; height: 280px; background-size: 1516px 280px; }	// 1516/11 = ~138
+	@include bp(34em) { width: 150px; height: 305px; background-size: 1652px 305px; }	// 1652/11 = ~150
+	@include bp(40em) { width: 160px; height: 325px; background-size: 1760px 325px; }	// 1760/11 = ~160
+}
+ 
+svg {
+	width: 100%;	// need for firefox so svg scales to fit parent w & h
+	height: 100%;
+	
+	.no-js & {
+		path { @include opacity(1); }
+	}
+}
+
+#hero--avatar-svg-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 118px;
+	height: 240px;
+	.svg & { @include opacity(0); }
+	.no-js & { @include opacity(1); }
+
+	@include bp(25em) { width: 138px; height: 280px; }	
+	@include bp(34em) { width: 150px; height: 305px; }	
+	@include bp(40em) { width: 160px; height: 325px; }	
+}
+
+#hero--pusher-wrapper {  
+	position: relative;
+	width: 30%;
+	height: 240px;
+	float: left;
+	text-align: right;
+	
+	@include bp(25em) { width: 30%; height: 280px; }
+	@include bp(34em) { width: 32%; height: 305px; }
+	@include bp(40em) { width: 34%; height: 325px; }
+
+	.no-svg & {
+		background-image: url("/images/hero-squares.png");		// base 198 x 199
+		background-repeat: no-repeat;
+		background-position: 110% 36%;
+		//background-size: 198px 198px;
+		width: 34%;
+	}
+}
+
+#hero--slinger-wrapper {
+	width: 30%;
+	height: 240px;
+	text-align: left;
+	float:left;
+}
+
+#hero--pusher-header {
+	position: absolute;
+	@include bp(40em) { right: 8px; }
+}
+
+#hero--slinger-header {
+	position: relative;
+}
+
+#hero--pusher-svg {
+	position: relative;
+	top: 34px;
+	left: -50px;
+	width: 150px;
+	height: 150px;
+
+	@include bp(22.5em) { left: -38px; top: 36px; width: 150px; height: 150px; }
+	@include bp(25em) { left: -30px; top: 50px; width: 150px; height: 150px; }
+	@include bp(28em) { left: -20px; top: 46px; width: 160px; height: 160px; }
+	@include bp(31em) { left: -10px; top: 44px; width: 166px; height: 166px; }
+	@include bp(34em) { left: 5px; top: 48px; width: 176px; height: 176px; }
+	@include bp(36em) { left: 10px; top: 45px; width: 190px;  height: 190px; }
+	@include bp(40em) { left: 13px; top: 38px; width: 212px; height: 212px}
+}
+
+#hero--code-wrapper {
+	position: relative;
+	top: 74px;
+	left: 5px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: .7em;
+	line-height: 1.4;
+	color: #777;
+
+	@include bp(25em) { left: 5px; top: 86px; font-size: .8em; }
+	@include bp(34em) { left: 5px; top: 94px; font-size: .85em; }
+	@include bp(40em) { left: 10px; top: 94px; font-size: .9em; }
+	
+	span {
+		position: relative;
+		display: block;
+		white-space: nowrap;
+		.svg & { @include opacity(0); }
+		.no-js & { @include opacity(1); }
+	}
+
+	#code2, #code3, #code7 { left: 21px; }
+	#code4, #code6 { left: 42px; }
+	#code5 { left: 63px; }
+}

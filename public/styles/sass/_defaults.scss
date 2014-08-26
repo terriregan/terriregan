@@ -1,0 +1,137 @@
+// Limited resets
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  //vertical-align:baseline;
+}
+
+*,
+*:after,
+*:before { 
+  @include box-sizing(border-box);
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #aaa;
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 1em;
+    background: $blue-lightest;
+}
+
+body {
+  @extend %font-primary;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $gray-dark;
+  background: $blue-lightest;
+  @include transition(opacity 700ms);
+
+  &.hidden-body {
+    @include transition(opacity 700ms);
+    .svg & { @include opacity(0); }
+    .no-js & { @include opacity(1); }
+  }
+}
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+// Customize the background color to match your design.
+::-moz-selection {
+    background: $blue-lighter;
+    text-shadow: none;
+    color: #fff;
+}
+
+::selection {
+    background: $blue-lighter;
+    text-shadow: none;
+    color: #fff;
+}
+
+.active {
+  cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %font-alternate; 
+  color: $blue-light;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+// default font sizes
+h1 { 
+  font-size: 2.4em; 
+
+  @include bp($bp-layout-small) {  font-size: 2.5em; }
+  @include bp($bp-layout-medium) {  font-size: 2.6em; }
+}
+// h2 { font-size: 1.5em; }
+// h3 { font-size: 1.17em; }
+// h4 { font-size: 1em; }
+// h5 { font-size: .83em; }
+// h6 { font-size: .75em; }
+
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 0;
+}
+
+a {
+  color: $accent-red;
+  //border-bottom: 1px dotted;
+  text-decoration: none;
+  // &:hover { text-decoration: underline; }
+}
+
+img {
+  border: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+// A better looking default horizontal rule
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    //border-top: 1px solid lighten($blue-darker:, 10%);   darken(#eee, 10%);
+    border-top: 1px solid #999;
+    border-top: 1px solid rgba(255, 255, 255, .4);
+    margin: 0;
+    padding: 0;
+}
+
+// Remove the gap between images, videos, audio and canvas and the bottom of
+// their containers: h5bp.com/i/440
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+// Remove default fieldset styles.
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Allow only vertical resizing of textareas.
+textarea {
+    resize: vertical;
+}

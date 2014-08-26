@@ -1,0 +1,86 @@
+{
+  "projects": [
+   {
+      "id" : "portfolio",
+      "shortname" : "Terri Regan Portfolio",
+      "fullname" : "Portfolio | Terri Regan Front End Developer",
+      "type" : "Responsive Web Site",
+      "thumbImage" : "project1-thumb.jpg",
+      "landingImage" : "project1-1.png",
+      "description" : "<p>DESCRIPTION</p>",
+      "role" : "<p>ROLE</p>",
+      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"],
+      "links" : [
+        {"git" : "https://github.com/terriregan/terriregan", "link" : "View code"}
+      ]
+    },
+     {
+      "id" : "bloom",
+      "shortname" : "Bloom ToolKit",
+      "fullname" : "Bloom ToolKit",
+      "type" : "Web Application",
+      "thumbImage" : "project2-thumb.jpg",
+      "landingImage" : "project2-1.jpg",
+      "images" : ["project2-2.jpg", "project2-3.jpg"],
+      "description" : "<p>The Bloom Toolkit is a suite of six tools designed to author, manage and deploy content to a variety of presentation layers.</p>",
+      "role" : "<p>ROLE</p>",
+      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"]
+    },
+    {
+      "id" : "startalk",
+      "shortname" : "STARTALK",
+      "fullname" : "Startalk Conference Website",
+      "type" : "Responsive Website Template",
+      "thumbImage" : "project3-thumb.jpg",
+      "landingImage" : "project3-1.png",
+      "images" : ["project3-2.jpg", "project3-3.jpg"],
+      "description" : "<p>STARTALK’s mission is to increase the number of Americans learning, speaking, and teaching critical need foreign languages by offering students (K–16) and teachers creative and engaging summer experiences.</p><p>The goal of the website was to register attendees, provide applicable information and help visitors navigate sessions during the conference.  It was important that the interface be simple, clear and consistent in order to facilitate efficiency.</p>",
+      "role" : "<p>I designed and developed a responsive UI template using HTML, CSS, Twitter Bootstrap and a touch of jQuery. I handed the template off for integration into a Drupal Content Management system.</p>",
+      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"]
+    },
+    {
+      "id" : "sanet",
+      "shortname" : "IANet / SANet",
+      "fullname" : "Intelligence / Signals Analysis Net",
+      "type" : "E-Learning",
+      "thumbImage" : "project4-thumb.jpg",
+      "landingImage" : "project4-1.jpg",
+      "images" : ["project4-2.jpg", "project4-3.jpg"],
+      "description" : "Developed for the US Department of Defense, the Intelligence Analysis (IANet) and the Signals Analysis Net (SANet) projects converted content from existing platform-delivered courses into rich-media standalone learning objects.",
+      "role" : "Lead frontend architect. Production Management",
+      "tech" : ["UI Design", "508 Accessibility", "Flex Framework", "SCORM", "Javascript", "Actionscript 3", "Flash Animation", "XML"],
+      "links" : [
+        {"git" : "https://github.com/terriregan/CoursePlayerFramework", "link" : "View a code sample"}, 
+        {"sample" : "http://demos.nflc.org/SANet2/Waveforms/main/index_calc.html", "link" : "View a lesson"}
+      ]
+    },
+     {
+      "id" : "vlo",
+      "shortname" : "Video Learning Object",
+      "fullname" : "Video Learning Object",
+      "type" : "E-Learning",
+      "thumbImage" : "project5-thumb.jpg",
+      "landingImage" : "project5-1.jpg",
+      "images" : ["project5-2.jpg", "project5-3.jpg"],
+      "description" :  "<p>DESCRIPTION</p>",
+      "role" : "<p>ROLE</p>",
+      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"],
+      "links" : [
+        {"git" : "https://github.com/terriregan/ActivityLibrary", "link" : "View a code sample"}, 
+        {"sample" : "http://demos.nflc.org/ALL_VLO/index.html?loid=v11ud06", "link" : "View a learning object"}
+      ]
+    },
+     {
+      "id" : "clara",
+      "shortname" : "Clara Barton",
+      "fullname" : "Clara Barton",
+      "type" : "Mobile Application",
+      "thumbImage" : "project6-thumb.jpg",
+      "landingImage" : "project6-1.jpg",
+      "images" : ["project6-2.jpg", "project6-3.jpg"],
+      "description" :  "<p>DESCRIPTION</p>",
+      "role" : "<p>ROLE</p>",
+      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{{!< default }}
+<div class="site-page">
+	<section>
+		<div class="project--hero-wrapper">
+			<div class="layout--container">
+				<div class="project--hero">
+				 	<img src="/images/{{project.landingImage}}" />
+				</div>
+			</div>
+		</div>
+		<div class="layout--container">
+			 <div class="project--content">
+			 	<div class="project--info">
+			 		<h3>{{project.fullname}} <span>{{project.type}}</span></h3>
+			 		<h4>About</h4>
+			 		{{{project.description}}}
+			 		<h4>What did I do?</h4>
+			 		{{{project.role}}}
+			 		<h4>Technologies</h4>
+			 		<ul>
+			 		{{#each project.tech}}
+			 			<li>{{ this }}</li>
+			 		{{/each}}
+			 		</ul>
+			 		<div class="project--links">
+			 		{{#each project.links}}
+			 			{{#if git}}
+			 		 		<a href="{{git}}">{{link}}</a>
+					 	{{/if}}
+					 	{{#if sample}}
+			 		 		<a href="{{sample}}">{{link}}</a>
+					 	{{/if}}
+			 		{{/each}}
+			 		</div>
+			 	</div>
+			 	{{#if project.images }}
+			 	<div class="project--images">
+			 		<div class="project--images-wrapper">
+				 		{{#each project.images}}
+				 			<img src="/images/{{ this }}" />
+				 		{{/each}}
+			 		</div>
+			 	</div>
+			 	{{/if}}
+			 </div>
+		</div>
+	</section>
+</div>

@@ -65,6 +65,7 @@ router.get('/contact', function (req, res) {
 	});
 });
 
+// display after after email success
 router.get('/contact/success', function (req, res) {
 	res.render('contact', {
 		contact: true, 

@@ -32,11 +32,7 @@
 			var startModuleName = $("script[data-main][data-start]").attr("data-start");
 			if (startModuleName) {
 				require([startModuleName], function (startModule) {
-					// $(function () {
-					// 	console.log('ready')
-					// }
 					$(function ()  {
-						console.log('load')
 					    var fn = $.isFunction(startModule) ? startModule : startModule.init;
 					    if (fn) { fn(); }
 					});

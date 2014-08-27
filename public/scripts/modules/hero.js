@@ -127,8 +127,8 @@ function ($, plugins) {
             walker.css('display', 'none');
             loader.css('display', 'none');
 
-            $('#hero--pusher-wrapper').on('mouseover', turnHead, 'left');
-            $('#hero--pusher-wrapper').on('mouseout', turnHead);
+            //$('#hero--pusher-wrapper').on('mouseover', turnHead, 'left');
+            //$('#hero--pusher-wrapper').on('mouseout', turnHead);
         };
 
         var turnHead = function(e) {

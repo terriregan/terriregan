@@ -7,9 +7,9 @@
       "type" : "Responsive Web Site",
       "thumbImage" : "project1-thumb.jpg",
       "landingImage" : "project1-1.png",
-      "description" : "<p>DESCRIPTION</p>",
-      "role" : "<p>ROLE</p>",
-      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"],
+      "description" : "<p>Personal portfolio site developed to provide a space to showcase work, connect with others and experiment with technologies. Built with a responsive layout, it takes a mobile first approach that uses progressive enhancement to ensure that older browsers still provide a solid experience, whilst modern browsers can go the next step and enhance the time spent on the site.</p>",
+      "role" : "<p>Complete site design and development using Express, a flexible Node.js web application framework.</p>",
+      "tech" : ["Node.js", "Express", "JavaSript", "HTML/CSS", "SASS/Compass", "Grunt", "Responsive Design"],
       "links" : [
         {"git" : "https://github.com/terriregan/terriregan", "link" : "View code"}
       ]
@@ -22,9 +22,9 @@
       "thumbImage" : "project2-thumb.jpg",
       "landingImage" : "project2-1.jpg",
       "images" : ["project2-2.jpg", "project2-3.jpg"],
-      "description" : "<p>The Bloom Toolkit is a suite of six tools designed to author, manage and deploy content to a variety of presentation layers.</p>",
-      "role" : "<p>ROLE</p>",
-      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"]
+      "description" : "<p>The Bloom Toolkit was develped to replace a legacy authoring system. The system had grown large and had become inflexible as data was tightly coupled with the frontend making modifications and enhancements difficult. The goal of the toolkit was threefold: (1) separate data from display (2) ease maintenance and promote reusability and (3) allow for the additions of new UIs</p><p>This was accomplished by breaking the legacy system into six distinct \"thick\" clients, each responsible for creating and managing a particular type of data and develpimg a REST API for communication between the clients and the data store.</p>",
+      "role" : "<p>I developed three of the thick client applications: Project Builder, Caption Builder and and Content Intake Tool.</p>",
+      "tech" : ["JavaSript", "Sencha ExtJs 4", "HTML, CSS", "SASS/Compass", "XML/XSLT"]
     },
     {
       "id" : "startalk",
@@ -46,9 +46,9 @@
       "thumbImage" : "project4-thumb.jpg",
       "landingImage" : "project4-1.jpg",
       "images" : ["project4-2.jpg", "project4-3.jpg"],
-      "description" : "Developed for the US Department of Defense, the Intelligence Analysis (IANet) and the Signals Analysis Net (SANet) projects converted content from existing platform-delivered courses into rich-media standalone learning objects.",
-      "role" : "Lead frontend architect. Production Management",
-      "tech" : ["UI Design", "508 Accessibility", "Flex Framework", "SCORM", "Javascript", "Actionscript 3", "Flash Animation", "XML"],
+      "description" : "Developed for the US Department of Defense, the Intelligence Analysis (IANet) and the Signals Analysis Net (SANet) projects converted content from existing platform-delivered courses into rich-media standalone learning objects.  The system needed to:  (1) load external animation, media and data files, (2) be fully 508 compliant and (3) deploy to the web, to a LMS and to a CD.",
+      "role" : "I designed and developed the system architecture, coded flash animations and reviewed all interactive content.",
+      "tech" : ["Flex", "Actionscript 3", "JavaScript", "508 Accessibility", "UI Design", "LMS/SCORM", "Flash Animation", "XML"],
       "links" : [
         {"git" : "https://github.com/terriregan/CoursePlayerFramework", "link" : "View a code sample"}, 
         {"sample" : "http://demos.nflc.org/SANet2/Waveforms/main/index_calc.html", "link" : "View a lesson"}
@@ -56,15 +56,15 @@
     },
      {
       "id" : "vlo",
-      "shortname" : "Video Learning Object",
-      "fullname" : "Video Learning Object",
+      "shortname" : "Video Learning Objects",
+      "fullname" : "Video Learning Objects",
       "type" : "E-Learning",
       "thumbImage" : "project5-thumb.jpg",
       "landingImage" : "project5-1.jpg",
       "images" : ["project5-2.jpg", "project5-3.jpg"],
-      "description" :  "<p>DESCRIPTION</p>",
-      "role" : "<p>ROLE</p>",
-      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"],
+      "description" :  "<p>Video Learning Objects are standalone units of instruction designed to help learners maintain and develop their preexisting proficiency in a target language. The application needed to dynamically configure itself based on language, activity types and supplemental resources.  It used either progressive or streaming media dependent on the enviroment.</p>",
+      "role" : "<p>I was the lead architect.</p>",
+      "tech" : ["Flex", "Actionscript 3", "JavaScript",  "UI Design", "LMS/SCORM", "XML"],
       "links" : [
         {"git" : "https://github.com/terriregan/ActivityLibrary", "link" : "View a code sample"}, 
         {"sample" : "http://demos.nflc.org/ALL_VLO/index.html?loid=v11ud06", "link" : "View a learning object"}

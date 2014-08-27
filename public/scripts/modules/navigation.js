@@ -31,7 +31,9 @@ function ($) {
         };
 
         var navHandler = function(e) {
-            e.preventDefault();
+            var newWin = $(this).attr('target');
+            
+            e.preventDefaut();
             var url = $(this).attr('href');
             if(url === '#nav') {
                  toggleMenu();

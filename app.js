@@ -96,12 +96,11 @@ if (app.get('env') === 'development') {
 
 // Error handler for Production -- suppress print stacktraces
 app.use(function (err, req, res, next) {
-    console.log("prod error");
+    console.log('production error - ' +  err);
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,
-        error: err
-        //error: {}
+        error: {}
     });
 });
 

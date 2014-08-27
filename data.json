@@ -23,7 +23,7 @@
       "thumbImage" : "project2-thumb.jpg",
       "landingImage" : "project2-1.jpg",
       "images" : ["project2-2.jpg", "project2-3.jpg"],
-      "description" : "<p>The Bloom Toolkit was develped to replace a legacy authoring system. The system had grown large and had become inflexible as data was tightly coupled with the frontend making modifications and enhancements difficult. The goal of the toolkit was threefold: (1) separate data from display (2) ease maintenance and promote reusability and (3) allow for the additions of new UIs</p><p>This was accomplished by breaking the legacy system into six distinct \"thick\" clients, each responsible for creating and managing a particular type of data and develpimg a REST API for communication between the clients and the data store.</p>",
+      "description" : "<p>The Bloom Toolkit was develped to replace a legacy authoring system. The system had grown large and had become inflexible as data was tightly coupled with the frontend making modifications and enhancements difficult. The goal of the toolkit was threefold: (1) separate data from display (2) ease maintenance and promote reusability and (3) allow for the additions of new UIs.</p><p>This was accomplished by breaking the legacy system into six distinct \"thick\" clients, each responsible for creating and managing a particular type of data and developing a REST API for communication between the clients and the data store.</p>",
       "role" : "<p>I developed three of the thick client applications: Project Builder, Caption Builder and and Content Intake Tool.</p>",
       "tech" : ["JavaSript", "Sencha ExtJs 4", "HTML, CSS", "SASS/Compass", "XML/XSLT"]
     },

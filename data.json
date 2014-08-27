@@ -7,6 +7,7 @@
       "type" : "Responsive Web Site",
       "thumbImage" : "project1-thumb.jpg",
       "landingImage" : "project1-1.png",
+      "images" : ["project1-2.jpg", "project1-3.jpg"],
       "description" : "<p>Personal portfolio site developed to provide a space to showcase work, connect with others and experiment with technologies. Built with a responsive layout, it takes a mobile first approach that uses progressive enhancement to ensure that older browsers still provide a solid experience, whilst modern browsers can go the next step and enhance the time spent on the site.</p>",
       "role" : "<p>Complete site design and development using Express, a flexible Node.js web application framework.</p>",
       "tech" : ["Node.js", "Express", "JavaSript", "HTML/CSS", "SASS/Compass", "Grunt", "Responsive Design"],
@@ -72,15 +73,15 @@
     },
      {
       "id" : "clara",
-      "shortname" : "Clara Barton",
-      "fullname" : "Clara Barton",
+      "shortname" : "Clara Barton House",
+      "fullname" : "Clara Barton House",
       "type" : "Mobile Application",
       "thumbImage" : "project6-thumb.jpg",
       "landingImage" : "project6-1.jpg",
       "images" : ["project6-2.jpg", "project6-3.jpg"],
-      "description" :  "<p>DESCRIPTION</p>",
-      "role" : "<p>ROLE</p>",
-      "tech" : ["Responsive Design", "Twitter Bootstrap", "HTML, CSS"]
+      "description" :  "<p>Developed for the National Park Service, this mobile application features FaceBook integration, a fun \"Photo Booth\" screen where a user can take a picture of themselves with Clara Barton, and various facts and information about this historic site.</p>",
+      "role" : "<p>I was the lead developer.</p>",
+      "tech" : ["Adobe AIR", "Flex", "Actionscript 3", "Facebook API"]
     }
   ]
 }

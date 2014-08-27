@@ -1,12 +1,14 @@
 var config = {
   development: {
-   
+  	user: 'USER',
+    pass: 'PASS'
   },
   testing: {
     
   },
   production: {
-    
+  	user: 'USER',
+    pass: 'PASS'
   }
 };
 

@@ -1,10 +1,11 @@
 'use strict';
 
 
-var express = require('express');
-var router = express.Router();
-var nodemailer = require('nodemailer');
-var appdata = require('../data.json');
+var express 	= require('express');
+var router 		= express.Router();
+var nodemailer	= require('nodemailer');
+var appdata 	= require('../data.json');
+var config 		= require('../config');
 
 // create reusable transporter object for sending emails
 var transporter = nodemailer.createTransport({ 
@@ -12,8 +13,8 @@ var transporter = nodemailer.createTransport({
 	port: 465,
 	secure: true,                    
 	auth: {
-		user: "contact@terriregan.com",
-		pass: "***REMOVED***"
+		user: config.user,
+		pass: config.pass
 	}
 });
 
